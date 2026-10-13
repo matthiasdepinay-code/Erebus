@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Atelier Erebus</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Atelier Erebus <small>armes à feu · moteur v0.2</small></h1>
+      <div class="barre">
+        <label for="exemple">Partir de</label>
+        <select id="exemple"></select>
+        <label for="calibre">Calibre</label>
+        <select id="calibre"></select>
+      </div>
+    </header>
+
+    <div class="main">
+      <div class="gauche">
+        <section class="panel">
+          <h2>Plan de profil</h2>
+          <div class="plan" id="plan"></div>
+          <div class="legende" id="legende"></div>
+        </section>
+        <section class="panel" id="problemes-panel">
+          <h2>Montage</h2>
+          <ul class="problemes" id="problemes"></ul>
+        </section>
+        <section class="panel">
+          <h2>Fiche technique de jeu</h2>
+          <div class="chiffres" id="chiffres"></div>
+          <div class="jauges" id="jauges"></div>
+        </section>
+        <div class="duo">
+          <section class="panel">
+            <h2>Système à gaz et fiabilité</h2>
+            <div id="gaz"></div>
+          </section>
+          <section class="panel">
+            <h2>Balistique</h2>
+            <div id="balistique"></div>
+          </section>
+        </div>
+      </div>
+
+      <aside class="panel atelier">
+        <h2>Pièces</h2>
+        <div id="arbre"></div>
+        <div class="export">
+          <div class="boutons">
+            <button class="btn principal" id="copier" type="button">Copier l'export JSON</button>
+            <button class="btn" id="basculer" type="button">Afficher l'export</button>
+          </div>
+          <textarea id="json" hidden aria-label="Export JSON de l'arme"></textarea>
+          <button class="btn" id="importer" type="button" hidden>Charger ce JSON</button>
+        </div>
+      </aside>
+    </div>
+    <p class="note">Les statistiques découlent de la physique de chaque pièce : masse et position (équilibre, inertie, recul libre), longueur de canon (vitesse initiale), traînée G1 (trajectoire), position de la prise de gaz et accessoires (fiabilité, cadence). Les coefficients sont des valeurs de jeu à équilibrer.</p>
+  </div>
+  <script type="module" src="/src/editor/main.ts"></script>
+</body>
+</html>

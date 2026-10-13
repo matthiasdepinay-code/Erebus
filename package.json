@@ -1,0 +1,19 @@
+{
+  "name": "erebus",
+  "version": "1.0.0",
+  "description": "Créateur d’armes à feu modulaire pour un jeu réaliste",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/fichier-unique.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc"
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.8"
+  },
+  "private": true,
+  "type": "module"
+}
